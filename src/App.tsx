@@ -12,9 +12,20 @@ function App() {
       <div className="feed">
         {/* Here you will use the data from the 'tweetsData' variable and populate every tweet
           that you received from the 'backend' (data.ts).
-         */}
+         */
+         /* Map through the tweetsData and render a Tweet component for each tweet */}
+        {tweetsData.map(tweet => (
+          <Tweet
+            key={tweet.id} // React key for efficient re-rendering
+            id={tweet.id}
+            username={tweet.username}
+            content={tweet.content}
+            initialLikes={tweet.likes} // Pass the likes count as initialLikes
+            timestamp={tweet.timestamp}
+          />
+        ))}
       </div>
-    </div>
+    </div>  
   );
 }
 
