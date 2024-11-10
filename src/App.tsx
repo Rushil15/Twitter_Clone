@@ -16,11 +16,10 @@ function App() {
          /* Map through the tweetsData and render a Tweet component for each tweet */}
         {tweetsData.map(tweet => (
           <Tweet
-            key={tweet.id} // React key for efficient re-rendering
             id={tweet.id}
             username={tweet.username}
             content={tweet.content}
-            initialLikes={tweet.likes} // Pass the likes count as initialLikes
+            initialLikes={tweet.likes}
             timestamp={tweet.timestamp}
           />
         ))}

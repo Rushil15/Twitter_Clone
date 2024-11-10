@@ -55,4 +55,3 @@ interface TweetProps {
 export default Tweet;
 
 
-// export default Tweet;
